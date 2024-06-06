@@ -1,0 +1,44 @@
+.nav{
+    height: 10vh;
+}
+.navbar {
+    margin: 0 auto;
+    padding: 0;
+    border-bottom: 1px solid gray;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    
+}
+
+.navbar img{
+    width: 8vh;
+}
+
+.navbar ul {
+    margin-top: 0;
+    margin-right: 20px;
+    list-style-type: none;
+    margin-left: 0%;
+    float: right;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.navbar li {
+    float:left;
+    padding-right: 1rem;
+    margin-right: 10px;
+}
+
+.navbar a {
+    color: black; 
+    text-decoration: none; 
+}
+
+.navbar a:hover {
+    color: gray; 
+}
