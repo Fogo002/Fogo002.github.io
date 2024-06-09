@@ -1,0 +1,36 @@
+.Contactos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Contactos .header{
+    text-align: center;
+    font-size: 25px;
+    background-color: rgba(245, 231, 44, 0.904);
+    padding-bottom: 15px;
+}
+
+.Contactos .content{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 100%;
+    gap: 15%;
+}
+
+
+.Contactos .content .infos{
+    background-color: red;
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+}
+
+.Contactos .content .mail{
+    background-color: aqua;
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+}

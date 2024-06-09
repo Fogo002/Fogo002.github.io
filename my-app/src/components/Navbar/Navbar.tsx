@@ -13,8 +13,8 @@ const Navbar = () => {
                     <ul>
                         <li><Link className='button-nav-icon' to={'/'} ><img src={icon} alt="" /></Link></li>
                         <li><Link className='button-nav-icon' to={'/'} > Página Inicial</Link></li>
-                        <li><Link className='button-nav-icon' to={'/produtos'} > Produtos</Link></li>
-                        <li><Link className='button-nav-icon' to={'/sobre'} > Sobre</Link></li>
+                        
+                        <li><Link className='button-nav-icon' to={'/atividades'} > Atividades</Link></li>
                         <li><Link className='button-nav-icon' to={'/contacto'} > Contacto</Link></li>
                     </ul>
 
