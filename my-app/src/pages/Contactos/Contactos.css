@@ -3,6 +3,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    min-height: 80vh;
 }
 
 .Contactos .header{
@@ -11,6 +12,12 @@
     background-color: rgba(245, 231, 44, 0.904);
     padding-bottom: 15px;
 }
+.Contactos  img{
+    width: 40px;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
 
 .Contactos .content{
     display: flex;
@@ -22,15 +29,19 @@
 
 
 .Contactos .content .infos{
-    background-color: red;
+
     width: 50%;
-    justify-content: center;
-    text-align: center;
+    
+}
+
+.Contactos .content .infos .dado{
+
+    margin-bottom: 20px;
+    
 }
 
 .Contactos .content .mail{
-    background-color: aqua;
+
     width: 50%;
-    justify-content: center;
-    text-align: center;
+
 }
