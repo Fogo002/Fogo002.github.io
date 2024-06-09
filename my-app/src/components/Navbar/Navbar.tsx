@@ -8,7 +8,8 @@ const Navbar = () => {
 
     return (
         <>
-            <div className='nav'>
+
+            <div className='Navbar'>
                 <nav className='navbar'>
                     <ul>
                         <li><Link className='button-nav-icon' to={'/'} ><img src={icon} alt="" /></Link></li>

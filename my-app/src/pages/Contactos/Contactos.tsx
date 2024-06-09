@@ -77,13 +77,13 @@ const Contactos = () => {
                         <div className='redesSociais'>
                             <h2>Redes Sociais</h2>
                             <a href="https://www.instagram.com/todossomosespeciais23/" target="_blank" rel="noopener noreferrer" >
-                                <InstagramIcon  style={{ color: '#E1306C', fontSize: 40 }} />
+                                <InstagramIcon style={{ color: '#E1306C', fontSize: 40 }} />
                             </a>
                             <a href="https://www.facebook.com/profile.php?id=100094503303826" target="_blank" rel="noopener noreferrer">
-                                <FacebookIcon  style={{ color: '#1877F2', fontSize: 40 }} />
+                                <FacebookIcon style={{ color: '#1877F2', fontSize: 40 }} />
                             </a>
                             <a href="https://www.youtube.com/@TodosSomosEspeciais" target="_blank" rel="noopener noreferrer">
-                                <YouTubeIcon  style={{ color: '#FF0000', fontSize: 40 }} />
+                                <YouTubeIcon style={{ color: '#FF0000', fontSize: 40 }} />
                             </a>
                         </div>
 
