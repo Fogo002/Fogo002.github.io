@@ -28,7 +28,9 @@ const Navbar = () => {
                         <li><Link className='button-nav-icon' to={'/'} ><img src={icon} alt="" /></Link></li>
                         <li><Link className='button-nav-icon' to={'/'} > Página Inicial</Link></li>
                         <li><MenuDropdown itens={[Item1,Item2]} titulo={'Dinâmica'} ></MenuDropdown></li>
+                        <li><Link className='button-nav-icon' to={'/constituicao'} > Constituição</Link></li>
                         <li><Link className='button-nav-icon' to={'/contacto'} > Contacto</Link></li>
+                        <li><Link className='button-nav-icon' to={'/faq'} > FAQs </Link></li>
                     </ul>
 
                 </nav>

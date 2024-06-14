@@ -29,7 +29,7 @@ const HomePage = () => {
                 <li>Estimular o diálogo intercultural e a colaboração entre diferentes grupos e comunidades, visando à construção de sociedades mais coesas e solidárias.</li>
               </ul>
             </li>
-            <li><strong>Valores:</strong> Nossa ação é pautada pelos seguintes valores fundamentais:
+            <li><strong>Valores:</strong> A nossa ação é pautada pelos seguintes valores fundamentais:
               <ul>
                 <li><strong>Inclusão:</strong> Acreditamos na dignidade e no valor intrínseco de cada indivíduo, independentemente de suas características ou circunstâncias.</li>
                 <li><strong>Empatia:</strong> Comprometemo-nos a ouvir e compreender as experiências e perspectivas dos outros, cultivando um ambiente de respeito mútuo e compaixão.</li>
