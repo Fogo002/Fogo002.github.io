@@ -5,7 +5,6 @@
 
 .HomePage  .lateral-left,
 .HomePage  .lateral-right {
-    margin-top: 1px;
     background-color: rgba(245, 231, 44, 0.904);
     width: 10%; 
     height: auto;
