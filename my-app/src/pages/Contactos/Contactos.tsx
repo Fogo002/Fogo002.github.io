@@ -4,7 +4,7 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 
 import emailjs from '@emailjs/browser';
-import { Box, Button, TextField, Typography } from '@mui/material';
+import { Box, Button, TextField, Typography,useMediaQuery } from '@mui/material';
 
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -34,6 +34,8 @@ const Contactos = () => {
 
     const [errorMessage, setErrorMessage,] = useState<boolean>(false);
     const [ErrorTextMessage, setErrorTextMessage] = useState<string>("");
+
+    const isSmallScreen = useMediaQuery('(max-width: 900px)');
 
     // Função para validar o nome (por exemplo)
     const validateName = (value: string) => {
@@ -198,7 +200,7 @@ const Contactos = () => {
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
-                                                width: 40, // Ajuste o tamanho conforme necessário
+                                                width: 40, 
                                                 height: 40,
                                                 borderRadius: '50%',
                                                 backgroundColor: 'yellow',
@@ -228,8 +230,10 @@ const Contactos = () => {
 
                         </div>
                         <div className='mail'>
-                            <Box sx={{ maxWidth: 500, mx: 'auto', mt: 4, p: 2, borderRadius: 4 }}>
-                                <Typography variant="h4" sx={{ fontWeight: 'bold' }} gutterBottom>Entre em Contato Conosco</Typography>
+                            <Box sx={{ maxWidth: 500, mt: 2}}>
+                                <div style={{textAlign: isSmallScreen ? 'center' : 'left'}}>
+                                    <Typography variant="h4" sx={{ fontWeight: 'bold' }} gutterBottom>Entre em Contato Conosco</Typography>
+                                </div>
                                 <Typography variant="h6" gutterBottom>Estamos aqui para incluir novas ideias, sugestões e pessoas!! Preencha o formulário abaixo e envie-nos a sua mensagem 🌻.</Typography>
                                 <form onSubmit={handleSubmit}>
                                     <TextField
@@ -239,6 +243,7 @@ const Contactos = () => {
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}
                                         margin="normal"
+                                        
                                         error={!!error}
                                         helperText={errorText}
 

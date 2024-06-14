@@ -4,7 +4,7 @@ import { Slider, Slide, ButtonBack, ButtonNext, Image, CarouselContext } from "p
 import "pure-react-carousel/dist/react-carousel.es.css";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { Typography } from '@mui/material';
+import { Typography, useMediaQuery } from '@mui/material';
 
 interface Slide {
     url: string;
@@ -19,7 +19,7 @@ interface SlideImagesProps {
 const SlideImages: React.FC<SlideImagesProps> = ({ images, titulo, descricao }) => {
     const [slideIndex, setSlideIndex] = useState<number>(0);
     const carouselContext = useContext(CarouselContext);
-
+    const isSmallScreen = useMediaQuery('(max-width: 900px)');
     useEffect(() => {
         const onChange = () => {
             const { currentSlide } = carouselContext.state;
@@ -28,6 +28,27 @@ const SlideImages: React.FC<SlideImagesProps> = ({ images, titulo, descricao }) 
         carouselContext.subscribe(onChange);
         return () => carouselContext.unsubscribe(onChange);
     }, [carouselContext]);
+
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [imageSize, setImageSize] = useState(500);
+
+    const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            if(windowWidth < 450){
+                setImageSize(350);
+            }
+            else{
+                setImageSize(500);
+            }
+           
+        };
+    }, []);
 
     const renderMedia = (url: string) => {
         const extension = url.split(".").pop()?.toLowerCase();
@@ -47,12 +68,12 @@ const SlideImages: React.FC<SlideImagesProps> = ({ images, titulo, descricao }) 
 
     return (
         <div className="SlideImage" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-            <div className="title">
-                <Typography variant="h4" sx={{ fontWeight: 'bold' }} gutterBottom>
+            <div className="title" style={{ marginTop: isSmallScreen ? '8%' : '2.5%',textAlign:"center"}}>
+                <Typography variant="h4" sx={{ fontWeight: 'bold' , fontSize: isSmallScreen ? '1.8rem' : '2.125rem',}} gutterBottom>
                     {titulo}
                 </Typography>
             </div>
-            <div style={{ position: 'relative', width: '500px', marginTop: "10px" }}>
+            <div style={{ position: 'relative', width: `${imageSize}px`, marginTop: "10px" }}>
                 <Slider className={"slider"}>
                     {images.map((slide, index) => (
                         <Slide tag="a" index={index} key={index}>
@@ -70,7 +91,7 @@ const SlideImages: React.FC<SlideImagesProps> = ({ images, titulo, descricao }) 
                 </ButtonNext>
             </div>
             <div className="descricao">
-                <Typography variant="h6" gutterBottom sx={{ whiteSpace: 'pre-line' }}>
+                <Typography variant="h6" gutterBottom sx={{ whiteSpace: 'pre-line',fontSize: isSmallScreen ? '1.0rem' : '1.25rem', }}>
                     {descricao}
                 </Typography>
             </div>
@@ -90,3 +111,5 @@ const arrowButtonStyle = {
 };
 
 export default SlideImages;
+
+

@@ -1,8 +1,17 @@
-.SlideImage .title{
-    margin-top: 2.5%;
-}
+
 
 .SlideImage .descricao{
     width: 60%;
     margin-top: 15px;
 }
+
+@media (max-width: 900px) {
+    .SlideImage .descricao{
+        width: 90%;
+        margin-top: 15px;
+    }
+
+    .SlideImage .titulo {
+        font-size: 14px;
+    }
+  }

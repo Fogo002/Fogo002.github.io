@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SlideImage from '../../components/SlideImages/SlideImages'
 import './Atividades.css'
 import { CarouselProvider } from "pure-react-carousel";
@@ -75,6 +75,30 @@ Estamos imensamente gratos pela oportunidade proporcionada pela Biblioteca Lúci
 Teremos o maior gosto em contar com a vossa presença nas próximas edições! Muitas felicidades para todos! 🤗
 `;
 
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [imageSize, setImageSize] = useState(200);
+
+    const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            
+            if(windowWidth < 400){
+                setImageSize(100);
+            }
+            else{
+                setImageSize(500);
+            }
+            
+        };
+    }, []);
+
+
+    
 
     return (
         <>
@@ -85,8 +109,8 @@ Teremos o maior gosto em contar com a vossa presença nas próximas edições! M
                 <CarouselProvider
                     visibleSlides={1}
                     totalSlides={images.length}
-                    naturalSlideWidth={500}
-                    naturalSlideHeight={500}
+                    naturalSlideWidth={200}
+                    naturalSlideHeight={200}
                     interval={3000}
                     infinite={true}
 
@@ -96,8 +120,8 @@ Teremos o maior gosto em contar com a vossa presença nas próximas edições! M
                 <CarouselProvider
                     visibleSlides={1}
                     totalSlides={images2.length}
-                    naturalSlideWidth={500}
-                    naturalSlideHeight={500}
+                    naturalSlideWidth={200}
+                    naturalSlideHeight={200}
                     interval={3000}
                     infinite={true}>
                     <SlideImage images={images2} titulo={"Visita ao Gatil: Amor e Cuidado com os Animais"} descricao={descricaoGatil} />
@@ -106,8 +130,8 @@ Teremos o maior gosto em contar com a vossa presença nas próximas edições! M
                 <CarouselProvider
                     visibleSlides={1}
                     totalSlides={images3.length}
-                    naturalSlideWidth={500}
-                    naturalSlideHeight={500}
+                    naturalSlideWidth={200}
+                    naturalSlideHeight={200}
                     interval={3000}
                     infinite={true}>
                     <SlideImage images={images3} titulo={"Encerramento da Semana Incluir + 2023 na Biblioteca Lúcio Craveiro da Silva"} descricao={descricaoRevista} />
