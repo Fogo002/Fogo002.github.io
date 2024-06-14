@@ -23,17 +23,20 @@
 .Contactos .content{
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 60%;
     height: 100%;
     margin: 50px auto;
 }
 
 .Contactos .redesSociais{
-    margin-top: 30%;
+    margin-top: 40%;
 }
 
 .Contactos .content .infos{
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .Contactos .content .infos .dado{
@@ -91,7 +94,6 @@
     }
 
     .Contactos .content .infos  {
-
         margin-top: 25px;
     }
 

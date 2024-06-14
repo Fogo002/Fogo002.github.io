@@ -230,8 +230,8 @@ const Contactos = () => {
 
                         </div>
                         <div className='mail'>
-                            <Box sx={{ maxWidth: 500, mt: 2}}>
-                                <div style={{textAlign: isSmallScreen ? 'center' : 'left'}}>
+                            <Box sx={{ maxWidth: 500, mt: 0,paddingY: isSmallScreen ? '15px' : '0pc'}}>
+                                <div style={{textAlign: isSmallScreen ? 'center' : 'left',marginTop:"0px"}}>
                                     <Typography variant="h4" sx={{ fontWeight: 'bold',fontSize: isSmallScreen ? '26px' : '2.125rem' }} gutterBottom>Entre em Contato Conosco</Typography>
                                 </div>
                                 <Typography variant="h6" sx={{ fontSize: isSmallScreen ? '18px' : '16px' }} gutterBottom>Estamos aqui para incluir novas ideias, sugestões e pessoas!! Preencha o formulário abaixo e envie-nos a sua mensagem 🌻.</Typography>
