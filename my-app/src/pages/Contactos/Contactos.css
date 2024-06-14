@@ -85,9 +85,14 @@
     }
 
     .Contactos .content .mail,
-    .Contactos .content .infos .dado {
+    .Contactos .content .infos  {
         width: 90%;
-        margin: 0 auto; /* Centraliza os elementos horizontalmente */
+        margin: 0 auto;
+    }
+
+    .Contactos .content .infos  {
+
+        margin-top: 25px;
     }
 
     .Contactos .mail {

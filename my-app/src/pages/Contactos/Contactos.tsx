@@ -232,9 +232,9 @@ const Contactos = () => {
                         <div className='mail'>
                             <Box sx={{ maxWidth: 500, mt: 2}}>
                                 <div style={{textAlign: isSmallScreen ? 'center' : 'left'}}>
-                                    <Typography variant="h4" sx={{ fontWeight: 'bold' }} gutterBottom>Entre em Contato Conosco</Typography>
+                                    <Typography variant="h4" sx={{ fontWeight: 'bold',fontSize: isSmallScreen ? '26px' : '2.125rem' }} gutterBottom>Entre em Contato Conosco</Typography>
                                 </div>
-                                <Typography variant="h6" gutterBottom>Estamos aqui para incluir novas ideias, sugestões e pessoas!! Preencha o formulário abaixo e envie-nos a sua mensagem 🌻.</Typography>
+                                <Typography variant="h6" sx={{ fontSize: isSmallScreen ? '18px' : '16px' }} gutterBottom>Estamos aqui para incluir novas ideias, sugestões e pessoas!! Preencha o formulário abaixo e envie-nos a sua mensagem 🌻.</Typography>
                                 <form onSubmit={handleSubmit}>
                                     <TextField
                                         fullWidth
@@ -262,7 +262,7 @@ const Contactos = () => {
                                         fullWidth
                                         label="Email"
                                         variant="outlined"
-                                        
+                                        sx={{ fontSize: isSmallScreen ? '10px' : '16px' }}
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
                                         margin="normal"
@@ -288,6 +288,7 @@ const Contactos = () => {
                                         margin="normal"
                                         error={!!errorMessage}
                                         helperText={ErrorTextMessage}
+                                        sx={{ fontSize: isSmallScreen ? '10px' : '16px' }}
 
                                     />
                                     <Button variant="contained" color="primary" type="submit" fullWidth sx={{ mt: 2 }}>

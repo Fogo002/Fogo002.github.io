@@ -12,7 +12,7 @@ const HomePage = () => {
           <h1>Inclusão em Ação: Uma Jornada de Transformação através da Ação Comunitária e Solidariedade</h1>
           <p>No coração do distrito de Braga, um grupo diversificado de jovens apaixonados, provenientes de diferentes áreas de formação, uniu-se em prol de uma causa comum: a promoção da inclusão e a transformação de realidades. Movidos por uma visão compartilhada de um mundo mais justo e igualitário, esses jovens visionários deram vida a uma iniciativa sem precedentes: um grupo promotor de entreajuda e mudança, que tece uma aliança única entre Ação Comunitária e Solidariedade.</p>
 
-          <h2>Origens e Inspiracão</h2>
+          <h2>Origens e Inspiração</h2>
           <p>No dia 4 de Julho de 2023, marcou-se o nascimento desta iniciativa revolucionária com a realização da revista inaugural "Todos Somos Especiais - Perspetivas da Inclusão em Contexto Escolar". Este evento emblemático não apenas sinalizou o início de uma jornada significativa, mas também estabeleceu os alicerces para uma missão extraordinária que transcende os limites convencionais da atuação social.</p>
 
           <h2>Missão: Rumo a um Mundo Mais Inclusivo</h2>
