@@ -1,41 +1,36 @@
 .HomePage {
     display: flex;
+    width: 100%;
 }
 
-.lateral-left,
-.lateral-right {
+.HomePage  .lateral-left,
+.HomePage  .lateral-right {
     margin-top: 1px;
     background-color: rgba(245, 231, 44, 0.904);
-    width: 280px; /* Defina a largura desejada */
-    height: auto; /* Defina a altura igual à altura da janela do navegador */
+    width: 10%; 
+    height: auto;
 }
 
-.content {
-
-    margin: 50px; 
-    max-width: calc(100% - 100px); 
-}
-.content {
+.HomePage  .content {
     margin: 50px auto;
-    width: 50%; /* O conteúdo deve ocupar apenas metade do espaço */
+    width: 50%; 
+
 }
+
 
 .HomePage h1 {
     font-size: 28px;
-    color: #333;
     margin-bottom: 20px;
 }
 
 .HomePage h2 {
     font-size: 24px;
-    color: #555;
     margin-top: 40px;
     margin-bottom: 10px;
 }
 
 .HomePage h3 {
     font-size: 20px;
-    color: #777;
     margin-top: 30px;
     margin-bottom: 10px;
 }
@@ -43,7 +38,6 @@
 .HomePage p, .HomePage ul {
     font-size: 16px;
     line-height: 1.6;
-    color: #444;
     margin-bottom: 20px;
 }
 
@@ -64,10 +58,37 @@
     margin-bottom: 0;
 }
 
-.HomePage strong {
-    color: #222;
-}
+
 
 .HomePage p:last-child {
     margin-bottom: 0;
 }
+
+@media (max-width: 900px) {
+    .HomePage h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .HomePage h2 {
+        font-size: 16px;
+        margin-top: 40px;
+        margin-bottom: 5px;
+    }
+    
+    .HomePage h3 {
+        font-size: 12px;
+        margin-top: 30px;
+        margin-bottom: 5px;
+    }
+    
+    .HomePage p, .HomePage ul {
+        font-size: 10px;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+    .HomePage  .content {
+        margin: 10px auto;
+        width: 70%; 
+    }
+  }

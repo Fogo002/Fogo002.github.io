@@ -1,3 +1,4 @@
+
 .custom-dropdown-toggle {
     background-color: transparent !important;
     color: black !important;
@@ -5,8 +6,7 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    padding-right: 0 !important; /* Remover o espaço reservado para a seta */
-    height: 70px;;
+    padding-right: 0 !important; 
 }
 
 .custom-dropdown-toggle::after {
@@ -22,7 +22,7 @@
 
 .dropdown-menu {
     position: absolute !important;
-    top: -4px !important; /* Posiciona o dropdown exatamente na linha do Navbar */
+
     left: 0 !important;
-    z-index: 1000 !important; /* Ajusta a ordem de empilhamento */
+    z-index: 1000 !important; 
 }

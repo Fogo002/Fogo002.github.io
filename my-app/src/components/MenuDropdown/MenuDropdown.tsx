@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Dropdown } from "react-bootstrap";
 import './MenuDropdown.css'; // Importa o arquivo CSS
 import { useNavigate } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 interface Item {
