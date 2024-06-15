@@ -4,6 +4,7 @@ import { Dropdown } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import './MenuDropdown.css'; // Importa o arquivo CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useMediaQuery } from '@mui/material';
 
 interface Item {
     nome: string;
@@ -60,6 +61,10 @@ const MenuDropdown: React.FC<MenuDropdownProps> = ({ itens, titulo }) => {
         }
     };
 
+    const isSmallScreen = useMediaQuery('(max-width: 900px)');
+    const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+
+
     return (
         <Dropdown
             onMouseEnter={handleMouseEnter}
@@ -72,10 +77,16 @@ const MenuDropdown: React.FC<MenuDropdownProps> = ({ itens, titulo }) => {
                 {titulo}
             </Dropdown.Toggle>
 
-            <Dropdown.Menu className={isDropdownOpen ? 'show' : ''}>
+            <Dropdown.Menu
+                className={isDropdownOpen ? 'show' : ''}
+                style={{ width: isSmallScreen ?( windowWidth + 5) : '500px !important', marginLeft: "-1px", borderRadius: isSmallScreen ? 0 : '5px' }}
+                
+                >
                 {itens.map((item: Item, index: number) => (
                     <Dropdown.Item
                         key={index}
+                        style={{ width: isSmallScreen ? (windowWidth + 5) : '500px !important'}}
+
                         onClick={() => handleMenuItemClick(item.link)}
                     >
                         {item.nome}
