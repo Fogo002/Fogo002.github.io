@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
+import './Revista.css';
 import Switch from '@mui/material/Switch';
 import Revista2 from './Revista2';
-import pdf from './revista.pdf';
-import './Revista.css';
+import pdf from './revista.pdf'
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.mjs',
-  import.meta.url,
-).toString();
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const Revista = () => {
   const [numPages, setNumPages] = useState<number>();
@@ -26,38 +24,11 @@ const Revista = () => {
 
   return (
     <div className="Revista">
-      <div className='header'>
-        <h1>Perspetivas da Inclusão em Contexto Escolar</h1>
-      </div>
-      <Switch
-        checked={type}
-        onChange={handleChange}
-        inputProps={{ 'aria-label': 'controlled' }}
-      />
-
       <div className='pdf-container'>
-        {type ? (
-          <Document
-            file={pdf}
-            onLoadSuccess={onDocumentLoadSuccess}
-          >
-            {Array.from(
-              new Array(numPages),
-              (el, index) => (
-                <Page
-                  key={`page_${index + 1}`}
-                  pageNumber={index + 1}
-                  className="pdf-page"
-                />
-              )
-            )}
-          </Document>
-        ) : (
-          <Revista2 />
-        )}
+        <Revista2></Revista2>
       </div>
     </div>
-  );
+  )
 };
 
 export default Revista;

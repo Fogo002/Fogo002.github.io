@@ -3,13 +3,9 @@ import { Document, Page, pdfjs } from 'react-pdf';
 import HTMLFlipBook from 'react-pageflip';
 import './Revista2.css';
 import { useMediaQuery } from '@mui/material';
-import pdf from './revista.pdf'
+import pdf from './revista.pdf';
 
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-    'pdfjs-dist/build/pdf.worker.min.mjs',
-    import.meta.url,
-).toString();
 
 const Revista2 = () => {
     const [numPages, setNumPages] = useState<number>();
@@ -29,6 +25,10 @@ const Revista2 = () => {
 
     return (
         <div className="Revista2">
+            <div className='header'>
+                <h1>Perspetivas da Inclusão em Contexto Escolar</h1>
+            </div>
+
             <Document
                 file={pdf}
                 onLoadSuccess={onDocumentLoadSuccess}
@@ -64,6 +64,7 @@ const Revista2 = () => {
                             <div key={`page_${index + 1}`} className="pdf-page">
                                 <Page
                                     pageNumber={index + 1}
+                                    width={pageWidth}
                                     height={pageHeight}
                                 />
                             </div>
