@@ -23,13 +23,39 @@
 .Contactos .content{
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 75%;
     height: 100%;
     margin: 50px auto;
 }
 
 .Contactos .redesSociais{
-    margin-top: 40%;
+    margin-top: auto;
+    text-align: center;
+    justify-content: center;
+    
+    flex-direction: column;
+}
+
+.Contactos .redesSociais .redes{
+
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+.Contactos .dados {
+    margin-bottom: auto; 
+    text-align: center;
+    
+}
+.Contactos .slogans {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto; 
+    margin-left: 0;
+    margin-right: 0;
+    font-family: 'UnifrakturMaguntia', cursive;
+    margin-top: auto; 
+    
 }
 
 .Contactos .content .infos{
@@ -39,8 +65,14 @@
     justify-content: space-between;
 }
 
-.Contactos .content .infos .dado{
+.Contactos h2 {
     margin-bottom: 20px;
+}
+
+.Contactos .content .infos .dado{
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: 18%;
 }
 
 .Contactos .content .mail{

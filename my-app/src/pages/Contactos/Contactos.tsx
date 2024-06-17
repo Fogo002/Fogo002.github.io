@@ -4,7 +4,7 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 
 import emailjs from '@emailjs/browser';
-import { Box, Button, TextField, Typography,useMediaQuery } from '@mui/material';
+import { Box, Button, TextField, Typography, useMediaQuery } from '@mui/material';
 
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -188,6 +188,7 @@ const Contactos = () => {
                                     </Box>
 
                                 </div>
+
                                 <div className='dado'>
                                     <Box
                                         sx={{
@@ -200,7 +201,7 @@ const Contactos = () => {
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
-                                                width: 40, 
+                                                width: 40,
                                                 height: 40,
                                                 borderRadius: '50%',
                                                 backgroundColor: 'yellow',
@@ -214,25 +215,40 @@ const Contactos = () => {
                                 </div>
 
                             </div>
+                            <div className='slogans'>
+                                <Typography variant="body1" sx={{ fontFamily: '"Dancing Script", cursive;', fontWeight: "700", fontSize: isSmallScreen ? '18px' : '16px' }}>
+                                    SE AS FLORES SÃO DIFERENTES, E TODAS ELAS BELAS, PORQUE OS
+                                    SERES HUMANOS NÃO VEEM BELEZA NA SUA DIFERENÇA?
+                                </Typography>
+                                <Typography variant="body1" sx={{ marginTop: "25px", fontFamily: '"Dancing Script", cursive;', fontWeight: "700", fontSize: isSmallScreen ? '18px' : '16px' }} >
+                                    SE AS PEÇAS DE UM PUZZLE PRECISAM DE SER TODAS DIFERENTES
+                                    PARA ENCAIXAR, PORQUE TEMOS DE SER TODOS IGUAIS PARA ENCAIXAR NA
+                                    SOCIEDADE?
+                                </Typography>
+
+                            </div>
                             <div className='redesSociais'>
                                 <h2>Redes Sociais</h2>
-                                <a href="https://www.instagram.com/todossomosespeciais23/" target="_blank" rel="noopener noreferrer" >
-                                    <InstagramIcon style={{ color: '#E1306C', fontSize: 40 }} />
-                                </a>
-                                <a href="https://www.facebook.com/profile.php?id=100094503303826" target="_blank" rel="noopener noreferrer">
-                                    <FacebookIcon style={{ color: '#1877F2', fontSize: 40 }} />
-                                </a>
-                                <a href="https://www.youtube.com/@TodosSomosEspeciais" target="_blank" rel="noopener noreferrer">
-                                    <YouTubeIcon style={{ color: '#FF0000', fontSize: 40 }} />
-                                </a>
+                                <div className='redes'>
+                                    <a href="https://www.instagram.com/todossomosespeciais23/" target="_blank" rel="noopener noreferrer" >
+                                        <InstagramIcon style={{ color: '#E1306C', fontSize: 40 }} />
+                                    </a>
+                                    <a href="https://www.facebook.com/profile.php?id=100094503303826" target="_blank" rel="noopener noreferrer">
+                                        <FacebookIcon style={{ color: '#1877F2', fontSize: 40 }} />
+                                    </a>
+                                    <a href="https://www.youtube.com/@TodosSomosEspeciais" target="_blank" rel="noopener noreferrer">
+                                        <YouTubeIcon style={{ color: '#FF0000', fontSize: 40 }} />
+                                    </a>
+                                </div>
+
                             </div>
 
 
                         </div>
                         <div className='mail'>
-                            <Box sx={{ maxWidth: 500, mt: 0,paddingY: isSmallScreen ? '15px' : '0pc'}}>
-                                <div style={{textAlign: isSmallScreen ? 'center' : 'left',marginTop:"0px"}}>
-                                    <Typography variant="h4" sx={{ fontWeight: 'bold',fontSize: isSmallScreen ? '26px' : '2.125rem' }} gutterBottom>Entre em Contato Conosco</Typography>
+                            <Box sx={{ maxWidth: 500, mt: 0, paddingY: isSmallScreen ? '15px' : '0pc' }}>
+                                <div style={{ textAlign: isSmallScreen ? 'center' : 'left', marginTop: "0px" }}>
+                                    <Typography variant="h4" sx={{ fontWeight: 'bold', fontSize: isSmallScreen ? '26px' : '2.125rem' }} gutterBottom>Entre em Contato Conosco</Typography>
                                 </div>
                                 <Typography variant="h6" sx={{ fontSize: isSmallScreen ? '18px' : '16px' }} gutterBottom>Estamos aqui para incluir novas ideias, sugestões e pessoas!! Preencha o formulário abaixo e envie-nos a sua mensagem 🌻.</Typography>
                                 <form onSubmit={handleSubmit}>
@@ -243,7 +259,7 @@ const Contactos = () => {
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}
                                         margin="normal"
-                                        
+
                                         error={!!error}
                                         helperText={errorText}
 
