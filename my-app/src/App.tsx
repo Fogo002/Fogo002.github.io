@@ -1,5 +1,5 @@
-
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import React from 'react';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import HomePage from "./pages/HomePage/HomePage";
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
@@ -8,73 +8,28 @@ import Contactos from './pages/Contactos/Contactos';
 import Jogos from './pages/Jogos/Jogos';
 import Constituicao from './pages/Constituicao/Constituicao';
 import FAQ from './pages/FAQ/FAQ';
-
+import Revista from './pages/Revista/Revista';
 
 function App() {
-
-
-
-  return (<>
-
-
-    <BrowserRouter>
-      <Routes>
-
-        <Route path='/' element={
-          <>
-            <Navbar></Navbar>
-            <HomePage />
-            <Footer></Footer>
-          </>
-        } />
-
-        <Route path='/atividades' element={
-          <>
-            <Navbar></Navbar>
-            <Atividades />
-            <Footer></Footer>
-          </>
-        } />
-
-        <Route path='/contacto' element={
-          <>
-            <Navbar></Navbar>
-            <Contactos />
-            <Footer></Footer>
-          </>
-        } />
-
-        <Route path='/jogos' element={
-          <>
-            <Navbar></Navbar>
-            <Jogos />
-            <Footer></Footer>
-          </>
-        } />
-
-        <Route path='/constituicao' element={
-          <>
-            <Navbar></Navbar>
-            <Constituicao />
-            <Footer></Footer>
-          </>
-        } />
-
-        <Route path='/faq' element={
-          <>
-            <Navbar></Navbar>
-            <FAQ />
-            <Footer></Footer>
-          </>
-        } />
-
-        <Route path='*' element={<Navigate to="/" replace />} />
-
-      </Routes>
-
-    </BrowserRouter>
-
-  </>
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Navbar />
+        <div className="content">
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/atividades' element={<Atividades />} />
+            <Route path='/contacto' element={<Contactos />} />
+            <Route path='/jogos' element={<Jogos />} />
+            <Route path='/constituicao' element={<Constituicao />} />
+            <Route path='/faq' element={<FAQ />} />
+            <Route path='/revista' element={<Revista />} />
+            <Route path='*' element={<Navigate to="/" replace />} />
+          </Routes>
+        </div>
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 }
 

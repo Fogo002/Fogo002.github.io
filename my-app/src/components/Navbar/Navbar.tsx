@@ -4,6 +4,7 @@ import icon from '../../assets/todos-icon.jpg'
 import MenuDropdown from '../MenuDropdown/MenuDropdown'
 import { useMediaQuery } from '@mui/material';
 import { useState } from 'react';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const Navbar = () => {
     interface Item {
@@ -56,7 +57,7 @@ const Navbar = () => {
                         <>
                             <ul>
                                 <li><Link className='button-nav-icon' to={'/'} ><img src={icon} alt="" /></Link></li>
-                                <li><MenuDropdown itens={[Item1, Item2, Item3]} titulo={'+'} ></MenuDropdown></li>
+                                <li><MenuDropdown itens={[Item4,Item1, Item2, Item3,Item5,Item6,Item7]} titulo={'+'} ></MenuDropdown></li>
                             </ul>
                         </>
 
