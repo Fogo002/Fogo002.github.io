@@ -13,3 +13,81 @@
     padding-bottom: 15px;
     padding-top: 15px;
 }
+
+.Constituicao .first-row{
+    margin-top:50px;
+    display: flex;
+    width: 100%;
+    height: 450px;
+    justify-content: center;
+}
+
+.Constituicao .first-row .left-column{
+    float: left;
+    padding-top: 5rem;
+}
+
+
+
+.Constituicao .first-row .right-column{
+    float: right;
+    margin-left: 10%;
+}
+
+.Constituicao .first-row .right-column img{
+    width: 600px;
+
+
+}
+
+.Constituicao .first-row p {
+    width: 300px;
+
+}
+
+.Constituicao .second-row{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Constituicao .second-row img{
+    width: 150px;
+    height: 130px;
+    margin-left: 15px;
+    border-radius: 50px;
+    border-bottom: 1px solid gray;
+}
+
+
+.Constituicao .persones{
+    
+    margin-top: 100px;
+
+}
+
+.Constituicao .person{
+    display: flex;
+    justify-content: center;
+}
+
+.Constituicao .person-image img{
+    width: 500px;
+    height: 350px;
+    border-radius: 15px;
+}
+
+.Constituicao .person-description{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    width:650px;
+    margin-left:50px;
+    margin-right:50px;
+
+}
