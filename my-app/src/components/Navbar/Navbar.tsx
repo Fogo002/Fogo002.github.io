@@ -57,7 +57,7 @@ const Navbar = () => {
                         <>
                             <ul>
                                 <li><Link className='button-nav-icon' to={'/'} ><img src={icon} alt="" /></Link></li>
-                                <li><MenuDropdown itens={[Item4,Item1, Item2, Item3,Item5,Item6,Item7]} titulo={'+'} ></MenuDropdown></li>
+                                <li><MenuDropdown itens={[Item4,Item1, Item2, Item3,Item5,Item6,Item7]} titulo={""} icon={MenuIcon} ></MenuDropdown></li>
                             </ul>
                         </>
 
@@ -66,7 +66,7 @@ const Navbar = () => {
                             <ul>
                                 <li><Link className='button-nav-icon' to={'/'} ><img src={icon} alt="" /></Link></li>
                                 <li><Link className='button-nav-icon' to={'/'} > Página Inicial</Link></li>
-                                <li><MenuDropdown itens={[Item1, Item2, Item3]} titulo={'Dinâmica'} ></MenuDropdown></li>
+                                <li><MenuDropdown itens={[Item1, Item2, Item3]}  titulo={'Dinâmica'} ></MenuDropdown></li>
                                 <li><Link className='button-nav-icon' to={'/constituicao'} > Constituição</Link></li>
                                 <li><Link className='button-nav-icon' to={'/contacto'} > Contacto</Link></li>
                                 <li><Link className='button-nav-icon' to={'/faq'} > FAQs </Link></li>

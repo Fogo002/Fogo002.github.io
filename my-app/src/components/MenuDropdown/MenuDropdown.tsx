@@ -14,9 +14,10 @@ interface Item {
 interface MenuDropdownProps {
     itens: Item[];
     titulo: string;
+    icon?: React.ElementType; // Ícone é opcional
 }
 
-const MenuDropdown: React.FC<MenuDropdownProps> = ({ itens, titulo }) => {
+const MenuDropdown: React.FC<MenuDropdownProps> = ({ itens, titulo, icon: Icon }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
     const isSmallScreen = useMediaQuery('(max-width: 900px)');
@@ -80,7 +81,8 @@ const MenuDropdown: React.FC<MenuDropdownProps> = ({ itens, titulo }) => {
             style={{ height: "100%" }}
         >
             <Dropdown.Toggle id="dropdown-basic" className="custom-dropdown-toggle">
-                {titulo}
+            {Icon && <Icon />} {/* Renderiza o ícone se existir */}
+            {titulo}
             </Dropdown.Toggle>
 
             <Dropdown.Menu
