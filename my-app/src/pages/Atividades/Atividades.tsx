@@ -38,7 +38,7 @@ const Atividades = () => {
     }));
 
     const descricaoLimpeza = `
- A equipa do "Todos Somos Especiais" participou na VII edição da Ação de Limpeza de Esposende.
+A equipa do "Todos Somos Especiais" participou na VII edição da Ação de Limpeza de Esposende.
 
 Durante a atividade, lamentamos a grande quantidade de lixo encontrada na praia, mas ficamos felizes por existirem iniciativas como esta.
 
@@ -88,10 +88,10 @@ Teremos o maior gosto em contar com a vossa presença nas próximas edições! M
             window.removeEventListener('resize', handleResize);
             
             if(windowWidth < 400){
-                setImageSize(100);
+                setImageSize(20);
             }
             else{
-                setImageSize(500);
+                setImageSize(800);
             }
             
         };
@@ -113,6 +113,7 @@ Teremos o maior gosto em contar com a vossa presença nas próximas edições! M
                     naturalSlideHeight={200}
                     interval={3000}
                     infinite={true}
+                    
 
                 >
                     <SlideImage images={images} titulo={"Juntos Pela Limpeza de Esposende"} descricao={descricaoLimpeza} />

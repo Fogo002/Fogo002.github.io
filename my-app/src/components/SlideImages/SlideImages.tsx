@@ -38,46 +38,50 @@ const SlideImages: React.FC<SlideImagesProps> = ({ images, titulo, descricao }) 
 
     useEffect(() => {
         window.addEventListener('resize', handleResize);
+        if (windowWidth < 450) {
+            setImageSize(300);
+        } else {
+            setImageSize(600);
+        }
         return () => {
             window.removeEventListener('resize', handleResize);
-            if(windowWidth < 450){
-                setImageSize(350);
-            }
-            else{
-                setImageSize(500);
-            }
-           
         };
-    }, []);
+    }, [windowWidth]);
 
     const renderMedia = (url: string) => {
         const extension = url.split(".").pop()?.toLowerCase();
         if (extension === "jpg" || extension === "jpeg" || extension === "png" || extension === "gif") {
-            return <Image src={url} hasMasterSpinner={true} />;
+            return (
+                <div className="media-container">
+                    <img src={url} alt="" className="media-content" />
+                </div>
+            );
         } else if (extension === "mp4") {
             return (
-                <video width="100%" height="100%" controls>
-                    <source src={url} type="video/mp4" />
-                    O seu navegador não suporta vídeos HTML5.
-                </video>
+                <div className="media-container">
+                    <video className="media-content" controls>
+                        <source src={url} type="video/mp4" />
+                        O seu navegador não suporta vídeos HTML5.
+                    </video>
+                </div>
             );
         } else {
-            return null; 
+            return null;
         }
     };
 
     return (
         <div className="SlideImage" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-            <div className="title" style={{ marginTop: isSmallScreen ? '8%' : '2.5%',textAlign:"center"}}>
-                <Typography variant="h4" sx={{ fontWeight: 'bold' , fontSize: isSmallScreen ? '1.8rem' : '2.125rem',}} gutterBottom>
+            <div className="title" style={{ marginTop: isSmallScreen ? '8%' : '2.5%', textAlign: "center" }}>
+                <Typography variant="h4" sx={{ fontWeight: 'bold', fontSize: isSmallScreen ? '1.8rem' : '2.125rem', }} gutterBottom>
                     {titulo}
                 </Typography>
             </div>
-            <div style={{ position: 'relative', width: `${imageSize}px`, marginTop: "10px" }}>
+            <div style={{ position: 'relative', width: `${imageSize}px`, height: `${imageSize}px`, marginTop: "10px" }}>
                 <Slider className={"slider"}>
                     {images.map((slide, index) => (
                         <Slide tag="a" index={index} key={index}>
-                            <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                            <div className="slide-content">
                                 {renderMedia(slide.url)}
                             </div>
                         </Slide>
@@ -91,7 +95,7 @@ const SlideImages: React.FC<SlideImagesProps> = ({ images, titulo, descricao }) 
                 </ButtonNext>
             </div>
             <div className="descricao">
-                <Typography variant="h6" gutterBottom sx={{ whiteSpace: 'pre-line',fontSize: isSmallScreen ? '1.0rem' : '1.25rem', }}>
+                <Typography variant="h6" gutterBottom sx={{ whiteSpace: 'pre-line', fontSize: isSmallScreen ? '1.0rem' : '1.25rem', }}>
                     {descricao}
                 </Typography>
             </div>
@@ -111,5 +115,3 @@ const arrowButtonStyle = {
 };
 
 export default SlideImages;
-
-
