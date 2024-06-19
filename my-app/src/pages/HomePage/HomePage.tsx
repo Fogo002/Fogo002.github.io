@@ -21,7 +21,6 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
-  backgroundColor: 'rgb(253, 249, 22);',
   padding: theme.spacing(2),
   maxWidth: 400,
   textAlign: 'center',
@@ -96,12 +95,12 @@ const HomePage = () => {
           <p>No coração do distrito de Braga, um grupo diversificado de jovens apaixonados, provenientes de diferentes áreas de formação, uniu-se em prol de uma causa comum: a promoção da inclusão e a transformação de realidades. Movidos por uma visão compartilhada de um mundo mais justo e igualitário, esses jovens visionários deram vida a uma iniciativa sem precedentes: um grupo promotor de entreajuda e mudança, que tece uma aliança única entre Ação Comunitária e Solidariedade.</p>
 
           <div style={{ display: "flex", flexDirection: isSmallScreen ? "column" : "row", gap: "10px", textAlign: "center", marginBottom: "10px" }}>
-            <div>
+            <div className={isSmallScreen ? "" : 'origens'}>
               <h2>Origens e Inspiração</h2>
               <p>No dia 4 de Julho de 2023, marcou-se o nascimento desta iniciativa revolucionária com a realização da revista inaugural "Todos Somos Especiais - Perspetivas da Inclusão em Contexto Escolar". Este evento emblemático não apenas sinalizou o início de uma jornada significativa, mas também estabeleceu os alicerces para uma missão extraordinária que transcende os limites convencionais da atuação social.</p>
 
             </div>
-            <div>
+            <div className={isSmallScreen ? "" : 'missao'}>
               <h2>Missão: Rumo a um Mundo Mais Inclusivo</h2>
               <p>A nossa missão é clara e urgente: trabalhar incansavelmente para promover a inclusão em todas as suas formas, desafiando estereótipos, quebrando barreiras e construindo pontes de compreensão e empatia. Através da sinergia entre Ação Comunitária e Solidariedade, aspiramos não apenas a sensibilizar, mas também a inspirar ação concreta em direção a uma sociedade mais justa e acolhedora para todos.</p>
 
@@ -131,7 +130,7 @@ const HomePage = () => {
             <Box sx={{ flexGrow: 1 }}>
               <Grid container spacing={2} justifyContent="center">
                 <Grid item>
-                  <StyledPaper sx={{ my: 1, p: 2, height: 250 }}>
+                  <StyledPaper sx={{ my: 1, p: 2, height: 250,backgroundColor: '#c92a40', }}>
                     <Typography variant="h1" gutterBottom fontWeight={700}>
                       Inclusão
                     </Typography>
@@ -141,7 +140,7 @@ const HomePage = () => {
                   </StyledPaper>
                 </Grid>
                 <Grid item>
-                  <StyledPaper sx={{ my: 1, p: 2, height: 250 }}>
+                  <StyledPaper sx={{ my: 1, p: 2, height: 250,backgroundColor: '#ffff99', }}>
                     <Typography variant="h1" gutterBottom fontWeight={700}>
                       Empatia
                     </Typography>
@@ -151,7 +150,7 @@ const HomePage = () => {
                   </StyledPaper>
                 </Grid>
                 <Grid item>
-                  <StyledPaper sx={{ my: 1, p: 2, height: 250 }}>
+                  <StyledPaper sx={{ my: 1, p: 2, height: 250 ,backgroundColor: 'rgba(28,133,181,255)',}}>
                     <Typography variant="h1" gutterBottom fontWeight={700}>
                       Criatividade                    </Typography>
                     <Typography>
@@ -160,7 +159,7 @@ const HomePage = () => {
                   </StyledPaper>
                 </Grid>
                 <Grid item>
-                  <StyledPaper sx={{ my: 1, p: 2, height: 250 }}>
+                  <StyledPaper sx={{ my: 1, p: 2, height: 250,backgroundColor: '#e2b126', }}>
                     <Typography variant="h1" gutterBottom fontWeight={700}>
                       Colaboração
                     </Typography>
@@ -170,7 +169,7 @@ const HomePage = () => {
                   </StyledPaper>
                 </Grid>
                 <Grid item>
-                  <StyledPaper sx={{ my: 1, p: 2, height: 250 }}>
+                  <StyledPaper sx={{ my: 1, p: 2, height: 250,backgroundColor: '#b787b7', }}>
                     <Typography variant="h1" gutterBottom fontWeight={700}>
                       Compromisso
                     </Typography>
