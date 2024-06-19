@@ -41,8 +41,8 @@ const Navbar = () => {
     }
 
     const Item7: Item = {
-        nome: 'FAQs',
-        link: '/faq'
+        nome: 'Mascote',
+        link: '/mascote'
     }
 
     const isSmallScreen = useMediaQuery('(max-width: 900px)');
@@ -69,7 +69,7 @@ const Navbar = () => {
                                 <li><MenuDropdown itens={[Item1, Item2, Item3]}  titulo={'Dinâmica'} ></MenuDropdown></li>
                                 <li><Link className='button-nav-icon' to={'/constituicao'} > Constituição</Link></li>
                                 <li><Link className='button-nav-icon' to={'/contacto'} > Contacto</Link></li>
-                                <li><Link className='button-nav-icon' to={'/faq'} > FAQs </Link></li>
+                                <li><Link className='button-nav-icon' to={'/mascote'} > Mascote </Link></li>
                             </ul>
 
                         </>

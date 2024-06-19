@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
+import React, { useState, useEffect, useRef } from 'react';
+import { Document, Page } from 'react-pdf';
 import HTMLFlipBook from 'react-pageflip';
 import './Revista2.css';
 import { useMediaQuery } from '@mui/material';
 import pdf from './revista.pdf';
 
-
-
 const Revista2 = () => {
     const [numPages, setNumPages] = useState<number>();
+    const flipBookContainerRef = useRef<HTMLDivElement>(null);
 
     function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
         setNumPages(numPages);
@@ -18,9 +17,9 @@ const Revista2 = () => {
     let pageWidth = 400;
     let pageHeight = 600;
 
-    if(isSmallScreen){
-        pageWidth = 400
-        pageHeight = 600;
+    if (isSmallScreen) {
+        pageWidth = 340;
+        pageHeight = 480;
     }
 
     return (
@@ -32,8 +31,9 @@ const Revista2 = () => {
             <Document
                 file={pdf}
                 onLoadSuccess={onDocumentLoadSuccess}
+
             >
-                <div className="flip-book-container" style={{display:"flex",justifyContent:'center'}}>
+                <div className="flip-book-container" style={{ overflow: 'hidden', display: 'flex', justifyContent: 'center' }}>
                     <HTMLFlipBook
                         width={pageWidth}
                         height={pageHeight}
@@ -46,7 +46,7 @@ const Revista2 = () => {
                         showCover={true}
                         mobileScrollSupport={true}
                         className="flip-book"
-                        style={{display:"flex",justifyContent:'center'}}
+                        style={{ display: "flex", justifyContent: 'center' }}
                         startPage={0}
                         drawShadow={true}
                         flippingTime={600}
@@ -58,7 +58,6 @@ const Revista2 = () => {
                         swipeDistance={30}
                         showPageCorners={false}
                         disableFlipByClick={false}
-                        
                     >
                         {Array.from(new Array(numPages || 0), (el, index) => (
                             <div key={`page_${index + 1}`} className="pdf-page">
@@ -72,10 +71,6 @@ const Revista2 = () => {
                     </HTMLFlipBook>
                 </div>
             </Document>
-
-            <div className="navigation">
-                {/* Navegação (se houver) */}
-            </div>
         </div>
     );
 };

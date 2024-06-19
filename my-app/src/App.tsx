@@ -7,7 +7,7 @@ import Atividades from './pages/Atividades/Atividades';
 import Contactos from './pages/Contactos/Contactos';
 import Jogos from './pages/Jogos/Jogos';
 import Constituicao from './pages/Constituicao/Constituicao';
-import FAQ from './pages/FAQ/FAQ';
+import FAQ from './pages/Mascote/Mascote';
 import Revista from './pages/Revista/Revista';
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
             <Route path='/contacto' element={<Contactos />} />
             <Route path='/jogos' element={<Jogos />} />
             <Route path='/constituicao' element={<Constituicao />} />
-            <Route path='/faq' element={<FAQ />} />
+            <Route path='/mascote' element={<FAQ />} />
             <Route path='/revista' element={<Revista />} />
             <Route path='*' element={<Navigate to="/" replace />} />
           </Routes>
