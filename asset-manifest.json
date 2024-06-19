@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.71830915.css",
-    "main.js": "/static/js/main.65e8f133.js",
+    "main.css": "/static/css/main.f916e4e4.css",
+    "main.js": "/static/js/main.414735a5.js",
     "static/js/453.68693753.chunk.js": "/static/js/453.68693753.chunk.js",
     "static/media/gatos-1.mp4": "/static/media/gatos-1.2caefd00bba1267d333d.mp4",
     "static/media/gatos-5.mp4": "/static/media/gatos-5.0aa1e8cd14d83c75118b.mp4",
     "static/media/gatos-4.mp4": "/static/media/gatos-4.cf7fd3abc079b87d7b35.mp4",
+    "static/media/revista.pdf": "/static/media/revista.4588f3c502dd066f2d3f.pdf",
+    "static/media/flores-2.png": "/static/media/flores-2.f51be6647008fe07b037.png",
     "static/media/gatos-3.mp4": "/static/media/gatos-3.008aca7479593b9913e3.mp4",
     "static/media/gatos-15.jpeg": "/static/media/gatos-15.d42af884af3493d81eeb.jpeg",
     "static/media/limpeza-5.jpg": "/static/media/limpeza-5.7728e0fa002911379286.jpg",
     "static/media/gatos-6.jpeg": "/static/media/gatos-6.ab59a225c374ea68e144.jpeg",
     "static/media/gatos-9.jpeg": "/static/media/gatos-9.ba47c2452ef359dd88d0.jpeg",
     "static/media/gatos-14.jpeg": "/static/media/gatos-14.f5c8fcb2e28da3cdff6c.jpeg",
+    "static/media/flores-3.png": "/static/media/flores-3.7c0c0e8dd6a4423dc302.png",
     "static/media/gatos-10.jpeg": "/static/media/gatos-10.47e400332ec6421445c1.jpeg",
     "static/media/gatos-7.jpeg": "/static/media/gatos-7.5bb847211b5002ce5ad1.jpeg",
     "static/media/gatos-12.jpeg": "/static/media/gatos-12.e6dc94189580ff3c6412.jpeg",
@@ -46,15 +49,17 @@
     "static/media/revista-15.jpg": "/static/media/revista-15.8b810dca405dd5573812.jpg",
     "static/media/revista-17.jpg": "/static/media/revista-17.ac74f8673be086e85fba.jpg",
     "static/media/revista-7.jpg": "/static/media/revista-7.fe48f53950de1a78d889.jpg",
+    "static/media/flores-1.png": "/static/media/flores-1.e6247eede24b4d4cb2ca.png",
     "static/media/instagram.png": "/static/media/instagram.edb90ecc706a7a25542b.png",
+    "static/media/Generic-Profile.jpg": "/static/media/Generic-Profile.0485b1b3d9fdd7d2f959.jpg",
     "static/media/todos-icon.jpg": "/static/media/todos-icon.f5995624cf52aff3648f.jpg",
     "index.html": "/index.html",
-    "main.71830915.css.map": "/static/css/main.71830915.css.map",
-    "main.65e8f133.js.map": "/static/js/main.65e8f133.js.map",
+    "main.f916e4e4.css.map": "/static/css/main.f916e4e4.css.map",
+    "main.414735a5.js.map": "/static/js/main.414735a5.js.map",
     "453.68693753.chunk.js.map": "/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.71830915.css",
-    "static/js/main.65e8f133.js"
+    "static/css/main.f916e4e4.css",
+    "static/js/main.414735a5.js"
   ]
 }

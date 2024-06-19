@@ -14,13 +14,14 @@ const Constituicao = () => {
     }, []);
 
     const serviceCategories = [
-        { name: 'Nome 1', description: "Texto da Pessoa 1sssssssssssssssssssssssssssssssssssssssssssssssssssss ssssssssssssssssssssssssssssssssssssss dsada", img: Profile },
-        { name: 'Nome 2', description: "Texto da Pessoa 2", img: Profile },
-        { name: 'Nome 3', description: "Texto da Pessoa 3", img: Profile },
-        { name: 'Nome 4', description: "Texto da Pessoa 4", img: Profile },
-        { name: 'Nome 5', description: "Texto da Pessoa 5", img: Profile },
-        { name: 'Nome 6', description: "Texto da Pessoa 6", img: Profile },
-        { name: 'Nome 7', description: "Texto da Pessoa 7", img: Profile }
+        { name: 'Sandra Almeida', description: "Texto da Pessoa 1sssssssssssssssssssssssssssssssssssssssssssssssssssss ssssssssssssssssssssssssssssssssssssss dsada", img: Profile },
+        { name: 'Paulo Miranda', description: "Texto da Pessoa 2", img: Profile },
+        { name: 'Márcia Gonçalves', description: "Texto da Pessoa 3", img: Profile },
+        { name: 'Ligia Mano', description: "Texto da Pessoa 4", img: Profile },
+        { name: 'Joana Carvalho', description: "Texto da Pessoa 5", img: Profile },
+        { name: 'Hernani Lopes', description: "Texto da Pessoa 6", img: Profile },
+        { name: 'Cecilia Cruz', description: "Texto da Pessoa 7", img: Profile },
+        { name: 'André Ferreira', description: "Texto da Pessoa 8", img: Profile }
     ];
 
 
