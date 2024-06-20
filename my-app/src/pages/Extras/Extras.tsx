@@ -49,7 +49,7 @@ const Extras = () => {
     const atividades = [
         { titulo: "Juntos Pela Limpeza de Esposende", imagens: images5, descricao: descricaoLimpeza },
         { titulo: "Encerramento da Semana Incluir + 2023 na Biblioteca Lúcio Craveiro da Silva", imagens: images, descricao: descricaoGatil },
-        { titulo: "Live com os manos brasileiros", imagens: images3, descricao: descricaoRevista },
+        { titulo: "Live com o Sr. Braga do 'Inclusão e Acessibilidade Para Todos'", imagens: images3, descricao: descricaoRevista },
         { titulo: "Desenvolvimento do Jogo no Scratch", imagens: images4, descricao: descricaoRevista },
         { titulo: "Feirinha", imagens: images2, descricao: descricaoRevista },
         { titulo: "Reunião do Todos Somos Especiais", imagens: images6, descricao: descricaoRevista },
