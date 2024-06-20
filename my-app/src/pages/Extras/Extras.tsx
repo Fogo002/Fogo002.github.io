@@ -89,9 +89,6 @@ const Extras = () => {
     useEffect(() => {
         const startIndex = (pageIndex - 1) * atividadesPorPagina;
         const endIndex = startIndex + atividadesPorPagina;
-        console.log("startIndex " + startIndex)
-        console.log("endIndex " + endIndex)
-        console.log(atividades.slice(startIndex, endIndex))
         setShowExtras([]);
         setShowExtras(JSON.parse(JSON.stringify(atividades.slice(startIndex, endIndex))));
     }, [pageIndex]);

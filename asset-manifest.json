@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4a576af0.css",
-    "main.js": "/static/js/main.39953983.js",
+    "main.js": "/static/js/main.d06f411e.js",
     "static/js/453.68693753.chunk.js": "/static/js/453.68693753.chunk.js",
     "static/media/extra-feira-0.mp4": "/static/media/extra-feira-0.54485768f97d8bd1c3f0.mp4",
     "static/media/gatos-1.mp4": "/static/media/gatos-1.2caefd00bba1267d333d.mp4",
@@ -76,11 +76,11 @@
     "static/media/todos-icon.jpg": "/static/media/todos-icon.f5995624cf52aff3648f.jpg",
     "index.html": "/index.html",
     "main.4a576af0.css.map": "/static/css/main.4a576af0.css.map",
-    "main.39953983.js.map": "/static/js/main.39953983.js.map",
+    "main.d06f411e.js.map": "/static/js/main.d06f411e.js.map",
     "453.68693753.chunk.js.map": "/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4a576af0.css",
-    "static/js/main.39953983.js"
+    "static/js/main.d06f411e.js"
   ]
 }
