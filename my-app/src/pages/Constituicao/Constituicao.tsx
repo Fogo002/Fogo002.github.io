@@ -14,13 +14,13 @@ const Constituicao = () => {
     }, []);
 
     const serviceCategories = [
-        { name: 'Sandra Almeida', description: "Texto da Pessoa 1sssssssssssssssssssssssssssssssssssssssssssssssssssss ssssssssssssssssssssssssssssssssssssss dsada", img: Profile },
-        { name: 'Paulo Miranda', description: "Texto da Pessoa 2", img: Profile },
-        { name: 'Márcia Gonçalves', description: "Texto da Pessoa 3", img: Profile },
-        { name: 'Ligia Mano', description: "Texto da Pessoa 4", img: Profile },
+        { name: 'Márcia Gonçalves', description: "Texto da Pessoa 1sssssssssssssssssssssssssssssssssssssssssssssssssssss ssssssssssssssssssssssssssssssssssssss dsada", img: Profile },
+        { name: 'Lígia Mano', description: "Texto da Pessoa 2", img: Profile },
+        { name: 'Sandra Almeida', description: "Texto da Pessoa 3", img: Profile },
+        { name: 'Paulo Miranda', description: "Texto da Pessoa 4", img: Profile },
         { name: 'Joana Carvalho', description: "Texto da Pessoa 5", img: Profile },
         { name: 'Hernani Lopes', description: "Texto da Pessoa 6", img: Profile },
-        { name: 'Cecilia Cruz', description: "Texto da Pessoa 7", img: Profile },
+        { name: 'Cecília da Cruz', description: "Texto da Pessoa 7", img: Profile },
         { name: 'André Ferreira', description: "Texto da Pessoa 8", img: Profile }
     ];
 

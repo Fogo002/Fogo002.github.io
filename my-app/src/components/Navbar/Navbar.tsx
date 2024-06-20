@@ -45,6 +45,11 @@ const Navbar = () => {
         link: '/mascote'
     }
 
+    const Item8: Item = {
+        nome: 'Extras',
+        link: '/extras'
+    }
+
     const isSmallScreen = useMediaQuery('(max-width: 900px)');
 
     return (
@@ -57,7 +62,7 @@ const Navbar = () => {
                         <>
                             <ul>
                                 <li><Link className='button-nav-icon' to={'/'} ><img src={icon} alt="" /></Link></li>
-                                <li><MenuDropdown itens={[Item4,Item1, Item2, Item3,Item5,Item6,Item7]} titulo={""} icon={MenuIcon} ></MenuDropdown></li>
+                                <li><MenuDropdown itens={[Item4,Item1, Item2, Item3,Item5,Item6,Item7,Item8]} titulo={""} icon={MenuIcon} ></MenuDropdown></li>
                             </ul>
                         </>
 
@@ -70,6 +75,7 @@ const Navbar = () => {
                                 <li><Link className='button-nav-icon' to={'/constituicao'} > Constituição</Link></li>
                                 <li><Link className='button-nav-icon' to={'/contacto'} > Contacto</Link></li>
                                 <li><Link className='button-nav-icon' to={'/mascote'} > Mascote </Link></li>
+                                <li><Link className='button-nav-icon' to={'/extras'} > Extras </Link></li>
                             </ul>
 
                         </>

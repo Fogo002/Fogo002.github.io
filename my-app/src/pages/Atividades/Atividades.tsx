@@ -125,7 +125,7 @@ Teremos o maior gosto em contar com a vossa presença nas próximas edições! M
                     <h1>Atividades</h1>
                 </div>
                 {showAtividades.map(({ titulo, imagens, descricao }, index) => (
-                    <div key={index}>
+                    <div key={`${pageIndex}-${index}`}>
                         <CarouselProvider
                             visibleSlides={1}
                             totalSlides={imagens.length}
