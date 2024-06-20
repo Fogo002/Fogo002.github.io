@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import SlideImage from '../../components/SlideImages/SlideImages'
-import './Atividades.css'
+import SlideImage from '../../components/SlideImages/SlideImages';
+import './Atividades.css';
 import { CarouselProvider } from "pure-react-carousel";
-
+import Pagination from '@mui/material/Pagination';
 
 const Atividades = () => {
 
@@ -29,9 +29,8 @@ const Atividades = () => {
         { url: require('../../assets/gatos-13.jpeg') },
         { url: require('../../assets/gatos-14.jpeg') },
         { url: require('../../assets/gatos-15.jpeg') },
-        { url: require('../../assets/gatos-16.jpeg') } // Ajustado para 'gatos-16.jpg' para completar o total de 15 imagens
+        { url: require('../../assets/gatos-16.jpeg') }
     ];
-
 
     const images3 = Array.from({ length: 23 }, (_, index) => ({
         url: require(`../../assets/revista-${index + 1}.jpg`)
@@ -44,7 +43,7 @@ Durante a atividade, lamentamos a grande quantidade de lixo encontrada na praia,
 
 Relembramos a importância de preservar o meio ambiente, evitando deitar lixo no chão.
 
-Convidamos todos a observar a quantidade de lixo nas bermas das estradas e outros locais que frequentemente passam despercebidos, e a participar em ações de limpeza como esta. Junte-se a nós para fazer a diferença! 💚`
+Convidamos todos a observar a quantidade de lixo nas bermas das estradas e outros locais que frequentemente passam despercebidos, e a participar em ações de limpeza como esta. Junte-se a nós para fazer a diferença! 💚`;
 
     const descricaoGatil = `
 O grupo Todos Somos Especiais tivemos o prazer de visitar um gatil e ajudar animais de rua. Foi um dia maravilhoso, repleto de alegria, amor e dedicação. Agradecemos imensamente pelo acolhimento caloroso e pelos momentos de carinho compartilhados com os gatinhos.
@@ -75,30 +74,49 @@ Estamos imensamente gratos pela oportunidade proporcionada pela Biblioteca Lúci
 Teremos o maior gosto em contar com a vossa presença nas próximas edições! Muitas felicidades para todos! 🤗
 `;
 
+    const atividades = [
+        { titulo: "Juntos Pela Limpeza de Esposende", imagens: images, descricao: descricaoLimpeza },
+        { titulo: "Visita ao Gatil: Amor e Cuidado com os Animais", imagens: images2, descricao: descricaoGatil },
+        { titulo: "Encerramento da Semana Incluir + 2023 na Biblioteca Lúcio Craveiro da Silva", imagens: images3, descricao: descricaoRevista },
+        // Adicione mais atividades aqui se necessário
+    ];
+
+    const atividadesPorPagina = 2;
+    const paginasTotal = Math.ceil(atividades.length / atividadesPorPagina);
+    const [pageIndex, setPageIndex] = useState<number>(1);
+    const [showAtividades, setShowAtividades] = useState<{
+        titulo: string;
+        imagens: {
+            url: any;
+        }[];
+        descricao: string;
+    }[]>(atividades.slice(0, atividadesPorPagina));
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [imageSize, setImageSize] = useState(200);
 
     const handleResize = () => {
         setWindowWidth(window.innerWidth);
+        if (windowWidth < 400) {
+            setImageSize(20);
+        } else {
+            setImageSize(800);
+        }
     };
 
     useEffect(() => {
         window.addEventListener('resize', handleResize);
         return () => {
             window.removeEventListener('resize', handleResize);
-            
-            if(windowWidth < 400){
-                setImageSize(20);
-            }
-            else{
-                setImageSize(800);
-            }
-            
         };
-    }, []);
+    }, [windowWidth]);
 
-
-    
+    const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+        setPageIndex(value);
+        const startIndex = (value - 1) * atividadesPorPagina;
+        const endIndex = startIndex + atividadesPorPagina;
+        setShowAtividades(atividades.slice(startIndex, endIndex));
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
     return (
         <>
@@ -106,40 +124,29 @@ Teremos o maior gosto em contar com a vossa presença nas próximas edições! M
                 <div className='header'>
                     <h1>Atividades</h1>
                 </div>
-                <CarouselProvider
-                    visibleSlides={1}
-                    totalSlides={images.length}
-                    naturalSlideWidth={200}
-                    naturalSlideHeight={200}
-                    interval={3000}
-                    infinite={true}
-                    
-
-                >
-                    <SlideImage images={images} titulo={"Juntos Pela Limpeza de Esposende"} descricao={descricaoLimpeza} />
-                </CarouselProvider>
-                <CarouselProvider
-                    visibleSlides={1}
-                    totalSlides={images2.length}
-                    naturalSlideWidth={200}
-                    naturalSlideHeight={200}
-                    interval={3000}
-                    infinite={true}>
-                    <SlideImage images={images2} titulo={"Visita ao Gatil: Amor e Cuidado com os Animais"} descricao={descricaoGatil} />
-                </CarouselProvider>
-
-                <CarouselProvider
-                    visibleSlides={1}
-                    totalSlides={images3.length}
-                    naturalSlideWidth={200}
-                    naturalSlideHeight={200}
-                    interval={3000}
-                    infinite={true}>
-                    <SlideImage images={images3} titulo={"Encerramento da Semana Incluir + 2023 na Biblioteca Lúcio Craveiro da Silva"} descricao={descricaoRevista} />
-                </CarouselProvider>
+                {showAtividades.map(({ titulo, imagens, descricao }, index) => (
+                    <div key={index}>
+                        <CarouselProvider
+                            visibleSlides={1}
+                            totalSlides={imagens.length}
+                            naturalSlideWidth={200}
+                            naturalSlideHeight={200}
+                            interval={3000}
+                            infinite={true}
+                        >
+                            <SlideImage images={imagens} titulo={titulo} descricao={descricao} />
+                        </CarouselProvider>
+                    </div>
+                ))}
+                {paginasTotal > 1 && (
+                    <div style={{ display: 'flex', justifyContent: 'center', paddingBottom: '10px', paddingTop: '10px' }}>
+                    <Pagination count={paginasTotal} page={pageIndex} onChange={handleChange} size="large" />
+                </div>
+                )}
+                
             </div>
         </>
-    )
-}
+    );
+};
 
 export default Atividades;

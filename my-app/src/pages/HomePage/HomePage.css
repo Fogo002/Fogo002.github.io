@@ -5,7 +5,7 @@
 
 .HomePage  .lateral-left,
 .HomePage  .lateral-right {
-    background-color: rgba(245, 231, 44, 0.904);
+    background-color: #ffff99;
     width: 10%; 
     height: auto;
 }
@@ -61,20 +61,14 @@
     margin-bottom: 0;
 }
 
-.HomePage .origens{
-    border: 2px solid black;
-}
-
-.HomePage .origens h2{
-    border-bottom: 2px solid black;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
+.HomePage .origens,
 .HomePage .missao{
     border: 2px solid black;
+    border-radius: 25px;
+    padding-bottom: 20px;
 }
 
+.HomePage .origens h2,
 .HomePage .missao h2{
     border-bottom: 2px solid black;
     padding-top: 10px;

@@ -9,9 +9,9 @@
 .Revista .header {
     text-align: center;
     font-size: 25px;
-    background-color: rgba(245, 231, 44, 0.904);
-    padding-bottom: 15px;
-    padding-top: 15px;
+    background-color: #ffff99;
+    padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 .Revista .pdf-container {
@@ -28,8 +28,8 @@
 }
 
 .Revista .react-pdf__Page__canvas {
-    margin: 0 !important; /* Remove margem padrão do canvas */
-    width: 100% !important; /* Garante que o canvas ocupe toda a largura do contêiner */
+    margin: 0 !important; 
+    width: 100% !important;
 }
 
 .Revista .react-pdf__Page__textContent,

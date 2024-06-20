@@ -9,30 +9,29 @@
 .Mascote .header{
     text-align: center;
     font-size: 25px;
-    background-color: rgba(245, 231, 44, 0.904);
-    padding-bottom: 15px;
-    padding-top: 15px;
+    background-color: #ffff99;
+    padding-bottom: 30px;
+    padding-top: 30px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
     position: relative;
-    overflow: hidden; /* Ensure any overflow is hidden */
+    overflow: hidden; 
 }
 
 .Mascote .flower-container {
     position: absolute;
     top:2px;
-    left: 90px; /* Adjust this value to move the image further left or right */
-    height: 100%; /* Ensure the container takes full height */
+    left: 90px; 
+    height: 100%; 
     display: flex;
     align-items: center;
 }
 
 .Mascote .flower-container img {
-    height: 130px; /* Increase the height to make the image larger */
-    
+    height: 130px; 
     padding: 0;
 }
 
