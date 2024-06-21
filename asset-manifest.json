@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.4a576af0.css",
-    "main.js": "/static/js/main.616df181.js",
+    "main.js": "/static/js/main.34cc4edc.js",
     "static/js/453.68693753.chunk.js": "/static/js/453.68693753.chunk.js",
     "static/media/extra-feira-0.mp4": "/static/media/extra-feira-0.54485768f97d8bd1c3f0.mp4",
     "static/media/gatos-1.mp4": "/static/media/gatos-1.2caefd00bba1267d333d.mp4",
     "static/media/extra-jogo-3.mp4": "/static/media/extra-jogo-3.cfd2a80094a34c96a019.mp4",
     "static/media/extra-jogo-2.mp4": "/static/media/extra-jogo-2.5d4382d40ca5761a4c11.mp4",
+    "static/media/extra-feira-3-fixed.mp4": "/static/media/extra-feira-3-fixed.6bc72645a85894e67fca.mp4",
     "static/media/extra-jogo-1.mp4": "/static/media/extra-jogo-1.29aa0c39cb040fd4ccc0.mp4",
     "static/media/extra-reuniao-1.mp4": "/static/media/extra-reuniao-1.e6059ba70a631f6b905e.mp4",
-    "static/media/extra-feira-3.mp4": "/static/media/extra-feira-3.95524627e49a84a01ebd.mp4",
     "static/media/gatos-5.mp4": "/static/media/gatos-5.0aa1e8cd14d83c75118b.mp4",
     "static/media/extra-feira-2.mp4": "/static/media/extra-feira-2.e48872ea55b87c39cbfd.mp4",
     "static/media/extra-reuniao-2.mp4": "/static/media/extra-reuniao-2.4ee403971c77b312bc0e.mp4",
@@ -76,11 +76,11 @@
     "static/media/todos-icon.jpg": "/static/media/todos-icon.f5995624cf52aff3648f.jpg",
     "index.html": "/index.html",
     "main.4a576af0.css.map": "/static/css/main.4a576af0.css.map",
-    "main.616df181.js.map": "/static/js/main.616df181.js.map",
+    "main.34cc4edc.js.map": "/static/js/main.34cc4edc.js.map",
     "453.68693753.chunk.js.map": "/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4a576af0.css",
-    "static/js/main.616df181.js"
+    "static/js/main.34cc4edc.js"
   ]
 }
