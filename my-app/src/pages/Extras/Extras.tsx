@@ -12,11 +12,12 @@ const Extras = () => {
     ];
 
     const images2 = [
-        { url: require('../../assets/extra-feira-0.mp4') },
+
         { url: require('../../assets/extra-feira-1.mp4') },
         { url: require('../../assets/extra-feira-2.mp4') },
         { url: require('../../assets/extra-feira-3.mp4') },
         { url: require('../../assets/extra-feira-4.mp4') },
+        { url: require('../../assets/extra-feira-0.mp4') },
         { url: require('../../assets/extra-feira-5.jpeg') },
         { url: require('../../assets/extra-feira-6.mp4') },
         { url: require('../../assets/extra-feira-7.mp4') },
@@ -58,7 +59,7 @@ const Extras = () => {
     const atividadesPorPagina = 2;
     const paginasTotal = Math.ceil(atividades.length / atividadesPorPagina);
     const [pageIndex, setPageIndex] = useState<number>(1);
-    
+
     const [showExtras, setShowExtras] = useState<{
         titulo: string;
         imagens: {
@@ -95,7 +96,7 @@ const Extras = () => {
 
     const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
         setPageIndex(value);
-        
+
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
@@ -125,6 +126,7 @@ const Extras = () => {
                         <Pagination count={paginasTotal} page={pageIndex} onChange={handleChange} size="large" />
                     </div>
                 )}
+
             </div>
         </>
     );
