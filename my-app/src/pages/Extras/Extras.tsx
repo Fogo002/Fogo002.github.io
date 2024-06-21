@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SlideImage from '../../components/SlideImages/SlideImages';
+import '../../components/SlideImages/SlideImages.css';
 import './Extras.css';
 import { CarouselProvider } from "pure-react-carousel";
 import Pagination from '@mui/material/Pagination';
@@ -12,7 +13,6 @@ const Extras = () => {
     ];
 
     const images2 = [
-
         { url: require('../../assets/extra-feira-1.mp4') },
         { url: require('../../assets/extra-feira-2.mp4') },
         { url: require('../../assets/extra-feira-3-fixed.mp4') },
@@ -90,45 +90,40 @@ const Extras = () => {
     useEffect(() => {
         const startIndex = (pageIndex - 1) * atividadesPorPagina;
         const endIndex = startIndex + atividadesPorPagina;
-        setShowExtras([]);
-        setShowExtras(JSON.parse(JSON.stringify(atividades.slice(startIndex, endIndex))));
+        setShowExtras(atividades.slice(startIndex, endIndex));
     }, [pageIndex]);
 
     const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
         setPageIndex(value);
-
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
-
     return (
-        <>
-            <div className='Extras'>
-                <div className='header'>
-                    <h1>Extras</h1>
-                </div>
-                {showExtras.map(({ titulo, imagens, descricao }, index) => (
-                    <div key={`${pageIndex}-${index}`}>
-                        <CarouselProvider
-                            visibleSlides={1}
-                            totalSlides={imagens.length}
-                            naturalSlideWidth={200}
-                            naturalSlideHeight={200}
-                            interval={3000}
-                            infinite={true}
-                        >
-                            <SlideImage images={imagens} titulo={titulo} descricao={descricao} />
-                        </CarouselProvider>
-                    </div>
-                ))}
-                {paginasTotal > 1 && (
-                    <div style={{ display: 'flex', justifyContent: 'center', paddingBottom: '10px', paddingTop: '10px' }}>
-                        <Pagination count={paginasTotal} page={pageIndex} onChange={handleChange} size="large" />
-                    </div>
-                )}
-
+        <div className='Extras'>
+            <div className='header'>
+                <h1>Extras</h1>
             </div>
-        </>
+            {showExtras.map(({ titulo, imagens, descricao }, index) => (
+                <div key={`${pageIndex}-${index}`}>
+                    <CarouselProvider
+                        key={`${titulo}-${index}`}
+                        visibleSlides={1}
+                        totalSlides={imagens.length}
+                        naturalSlideWidth={200}
+                        naturalSlideHeight={200}
+                        interval={3000}
+                        infinite={true}
+                    >
+                        <SlideImage images={imagens} titulo={titulo} descricao={descricao}  />
+                    </CarouselProvider>
+                </div>
+            ))}
+            {paginasTotal > 1 && (
+                <div style={{ display: 'flex', justifyContent: 'center', paddingBottom: '10px', paddingTop: '10px' }}>
+                    <Pagination count={paginasTotal} page={pageIndex} onChange={handleChange} size="large" />
+                </div>
+            )}
+        </div>
     );
 };
 

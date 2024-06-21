@@ -50,10 +50,11 @@ const SlideImages: React.FC<SlideImagesProps> = ({ images, titulo, descricao }) 
 
     useEffect(() => {
         window.addEventListener('resize', handleResize);
-        if (windowWidth < 450) {
-            setImageSize(300);
-        } else {
+        
+        if (windowWidth > 480) {
             setImageSize(600);
+        } else {
+            setImageSize(300);
         }
         return () => {
             window.removeEventListener('resize', handleResize);
