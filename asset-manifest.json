@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1d7bf2e1.css",
-    "main.js": "/static/js/main.d91c496e.js",
+    "main.js": "/static/js/main.461b34f0.js",
     "static/js/453.68693753.chunk.js": "/static/js/453.68693753.chunk.js",
     "static/media/extra-feira-0.mp4": "/static/media/extra-feira-0.289f7d96bbae34350e7b.mp4",
     "static/media/gatos-1.mp4": "/static/media/gatos-1.72480adc81b8af86274a.mp4",
@@ -9,6 +9,7 @@
     "static/media/gatos-5.mp4": "/static/media/gatos-5.d41aeb518878189ebdee.mp4",
     "static/media/extra-feira-3-fixed.mp4": "/static/media/extra-feira-3-fixed.9658963ba5ffd9f9782a.mp4",
     "static/media/gatos-4.mp4": "/static/media/gatos-4.0d40c5d829c36b83698a.mp4",
+    "static/media/extra-revista-4.mp4": "/static/media/extra-revista-4.fd4294d8ee7ad06c190f.mp4",
     "static/media/revista.pdf": "/static/media/revista.4588f3c502dd066f2d3f.pdf",
     "static/media/extra-feira-2.mp4": "/static/media/extra-feira-2.3db5aa9bd3ce30a1e0e5.mp4",
     "static/media/extra-jogo-2.mp4": "/static/media/extra-jogo-2.648e809fe40cb1e1c131.mp4",
@@ -76,11 +77,11 @@
     "static/media/todos-icon.jpg": "/static/media/todos-icon.f5995624cf52aff3648f.jpg",
     "index.html": "/index.html",
     "main.1d7bf2e1.css.map": "/static/css/main.1d7bf2e1.css.map",
-    "main.d91c496e.js.map": "/static/js/main.d91c496e.js.map",
+    "main.461b34f0.js.map": "/static/js/main.461b34f0.js.map",
     "453.68693753.chunk.js.map": "/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1d7bf2e1.css",
-    "static/js/main.d91c496e.js"
+    "static/js/main.461b34f0.js"
   ]
 }
