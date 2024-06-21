@@ -1,5 +1,5 @@
 
-const hostname = 'https://somos-todos-especiais.web.app/';
+const hostname = 'https://fogo002.github.io/';
 
 const urls = [
   { url: '/', changefreq: 'daily', priority: 1 },
@@ -19,7 +19,7 @@ const { createWriteStream } = require('fs');
 
 const sitemapStream = new SitemapStream({ hostname });
 
-const writeStream = createWriteStream('./public/sitemap.xml');
+const writeStream = createWriteStream('./public/sitemap2.xml');
 sitemapStream.pipe(writeStream);
 
 urls.forEach(url => sitemapStream.write(url));
