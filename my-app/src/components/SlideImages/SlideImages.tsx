@@ -5,6 +5,7 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Typography, useMediaQuery } from '@mui/material';
+import 'video-react/dist/video-react.css'; // Importe o CSS do video-react
 
 interface Slide {
     url: string;
