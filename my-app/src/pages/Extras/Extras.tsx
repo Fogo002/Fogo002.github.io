@@ -10,6 +10,7 @@ const Extras = () => {
         { url: require('../../assets/extra-revista-1.jpeg') },
         { url: require('../../assets/extra-revista-2.jpeg') },
         { url: require('../../assets/extra-revista-3.mp4') },
+        { url: require('../../assets/extra-revista-4.mp4') },
     ];
 
     const images2 = [
