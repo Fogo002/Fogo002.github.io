@@ -2,7 +2,4 @@
 User-agent: *
 Disallow:
 
-Allow: /favicon-2.ico
-Allow: /index.html
-
 Sitemap: https://somos-todos-especiais.web.app/sitemap.xml
