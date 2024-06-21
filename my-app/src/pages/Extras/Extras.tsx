@@ -74,7 +74,7 @@ const Extras = () => {
     const handleResize = () => {
         setWindowWidth(window.innerWidth);
         if (windowWidth < 400) {
-            setImageSize(20);
+            setImageSize(200);
         } else {
             setImageSize(800);
         }

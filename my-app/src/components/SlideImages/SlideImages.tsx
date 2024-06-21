@@ -5,7 +5,7 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Typography, useMediaQuery } from '@mui/material';
-import 'video-react/dist/video-react.css'; // Importe o CSS do video-react
+import { VideoPlayer, VideoPlayerProps } from "@graphland/react-video-player";
 
 interface Slide {
     url: string;
@@ -22,22 +22,12 @@ const SlideImages: React.FC<SlideImagesProps> = ({ images, titulo, descricao }) 
     const carouselContext = useContext(CarouselContext);
     const isSmallScreen = useMediaQuery('(max-width: 900px)');
 
-    // Create refs for video elements
-    const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
-    
     useEffect(() => {
         const onChange = () => {
             const { currentSlide } = carouselContext.state;
             setSlideIndex(currentSlide);
-
-            // Pause all videos when the slide changes
-            videoRefs.current.forEach((video) => {
-                if (video) {
-                    video.pause();
-                }
-            });
         };
-        
+
         carouselContext.subscribe(onChange);
         return () => carouselContext.unsubscribe(onChange);
     }, [carouselContext]);
@@ -51,26 +41,21 @@ const SlideImages: React.FC<SlideImagesProps> = ({ images, titulo, descricao }) 
 
     useEffect(() => {
         window.addEventListener('resize', handleResize);
-        
+
         if (windowWidth > 480) {
             setImageSize(600);
         } else {
-            setImageSize(300);
+            setImageSize(320);
         }
         return () => {
             window.removeEventListener('resize', handleResize);
         };
     }, [windowWidth]);
 
-    const handleVideoError = (event: React.SyntheticEvent<HTMLVideoElement, Event>) => {
-        console.error("Error loading video:", event.currentTarget.src);
-    };
 
-    const handleVideoPlay = (index: number) => {
-        console.log(`Video at index ${index} is playing.`);
-    };
 
     const renderMedia = (url: string, index: number) => {
+
         const extension = url.split(".").pop()?.toLowerCase();
         if (extension === "jpg" || extension === "jpeg" || extension === "png" || extension === "gif") {
             return (
@@ -81,16 +66,16 @@ const SlideImages: React.FC<SlideImagesProps> = ({ images, titulo, descricao }) 
         } else if (extension === "mp4") {
             return (
                 <div className="media-container">
-                    <video
-                        ref={(el) => (videoRefs.current[index] = el)}
-                        className="media-content"
-                        controls
-                        onError={handleVideoError}
-                        onPlay={() => handleVideoPlay(index)}
-                    >
-                        <source src={url} type="video/mp4" />
-                        O seu navegador não suporta vídeos HTML5.
-                    </video>
+                    <VideoPlayer
+                    
+                        height={isSmallScreen? 300 :610}
+                        isFluid
+                        playbackRates={[0.5, 1, 1.5, 2]}
+                        sources={[{ src: url, type: 'video/mp4' }]}
+                        theme="fantasy"
+                        width={310}
+                        
+                    />
                 </div>
             );
         } else {
@@ -108,7 +93,7 @@ const SlideImages: React.FC<SlideImagesProps> = ({ images, titulo, descricao }) 
             <div style={{ position: 'relative', width: `${imageSize}px`, height: `${imageSize}px`, marginTop: "10px" }}>
                 <Slider className={"slider"}>
                     {images.map((slide, index) => (
-                        <Slide tag="a" index={index} key={index}>
+                        <Slide index={index} key={index}>
                             <div className="slide-content">
                                 {renderMedia(slide.url, index)}
                             </div>
