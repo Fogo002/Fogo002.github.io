@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://fogo002.github.io/sitemap.xml
+Sitemap: https://fogo002.github.io/sitemap2.xml
