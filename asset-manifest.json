@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1d7bf2e1.css",
-    "main.js": "/static/js/main.95f5174b.js",
+    "main.js": "/static/js/main.3671ca79.js",
     "static/js/453.68693753.chunk.js": "/static/js/453.68693753.chunk.js",
     "static/media/extra-feira-0.mp4": "/static/media/extra-feira-0.289f7d96bbae34350e7b.mp4",
     "static/media/gatos-1.mp4": "/static/media/gatos-1.72480adc81b8af86274a.mp4",
@@ -16,14 +16,14 @@
     "static/media/extra-praia-1.mp4": "/static/media/extra-praia-1.54adda237322627c9291.mp4",
     "static/media/extra-jogo-3.mp4": "/static/media/extra-jogo-3.62590b5499aeae43af51.mp4",
     "static/media/extra-revista-3.mp4": "/static/media/extra-revista-3.896ae596ac0a398526c5.mp4",
-    "static/media/extra-estilo-1.mp4": "/static/media/extra-estilo-1.236eef5b0c5d0ce82da5.mp4",
+    "static/media/extra-feira-4.mp4": "/static/media/extra-feira-4.236eef5b0c5d0ce82da5.mp4",
     "static/media/extra-jogo-1.mp4": "/static/media/extra-jogo-1.f5616c5b1ef67707c464.mp4",
     "static/media/extra-praia-2.mp4": "/static/media/extra-praia-2.c029047477ddabe87cac.mp4",
     "static/media/extra-reuniao-2.mp4": "/static/media/extra-reuniao-2.7e2bdde0221bb2f305fa.mp4",
     "static/media/gatos-3.mp4": "/static/media/gatos-3.800549ff0c9227667e39.mp4",
     "static/media/flores-2.png": "/static/media/flores-2.f51be6647008fe07b037.png",
     "static/media/extra-feira-1.mp4": "/static/media/extra-feira-1.86c644ec0895f6152196.mp4",
-    "static/media/extra-feira-7.mp4": "/static/media/extra-feira-7.0290aa280d6d2ff27634.mp4",
+    "static/media/extra-estilo-1.mp4": "/static/media/extra-estilo-1.0290aa280d6d2ff27634.mp4",
     "static/media/flower.png": "/static/media/flower.f9e0515e70e50803dea9.png",
     "static/media/gatos-15.jpeg": "/static/media/gatos-15.d42af884af3493d81eeb.jpeg",
     "static/media/limpeza-5.jpg": "/static/media/limpeza-5.7728e0fa002911379286.jpg",
@@ -77,11 +77,11 @@
     "static/media/todos-icon.jpg": "/static/media/todos-icon.f5995624cf52aff3648f.jpg",
     "index.html": "/index.html",
     "main.1d7bf2e1.css.map": "/static/css/main.1d7bf2e1.css.map",
-    "main.95f5174b.js.map": "/static/js/main.95f5174b.js.map",
+    "main.3671ca79.js.map": "/static/js/main.3671ca79.js.map",
     "453.68693753.chunk.js.map": "/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1d7bf2e1.css",
-    "static/js/main.95f5174b.js"
+    "static/js/main.3671ca79.js"
   ]
 }
