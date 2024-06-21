@@ -15,7 +15,7 @@ const Extras = () => {
 
         { url: require('../../assets/extra-feira-1.mp4') },
         { url: require('../../assets/extra-feira-2.mp4') },
-        { url: require('../../assets/extra-feira-3.mp4') },
+        { url: require('../../assets/extra-feira-3-fixed.mp4') },
         { url: require('../../assets/extra-feira-4.mp4') },
         { url: require('../../assets/extra-feira-0.mp4') },
         { url: require('../../assets/extra-feira-5.jpeg') },

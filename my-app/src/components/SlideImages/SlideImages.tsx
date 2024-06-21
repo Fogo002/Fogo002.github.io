@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import './SlideImages.css';
-import { Slider, Slide, ButtonBack, ButtonNext, Image, CarouselContext } from "pure-react-carousel";
+import { Slider, Slide, ButtonBack, ButtonNext, CarouselContext } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -20,11 +20,23 @@ const SlideImages: React.FC<SlideImagesProps> = ({ images, titulo, descricao }) 
     const [slideIndex, setSlideIndex] = useState<number>(0);
     const carouselContext = useContext(CarouselContext);
     const isSmallScreen = useMediaQuery('(max-width: 900px)');
+
+    // Create refs for video elements
+    const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+    
     useEffect(() => {
         const onChange = () => {
             const { currentSlide } = carouselContext.state;
             setSlideIndex(currentSlide);
+
+            // Pause all videos when the slide changes
+            videoRefs.current.forEach((video) => {
+                if (video) {
+                    video.pause();
+                }
+            });
         };
+        
         carouselContext.subscribe(onChange);
         return () => carouselContext.unsubscribe(onChange);
     }, [carouselContext]);
@@ -48,7 +60,15 @@ const SlideImages: React.FC<SlideImagesProps> = ({ images, titulo, descricao }) 
         };
     }, [windowWidth]);
 
-    const renderMedia = (url: string) => {
+    const handleVideoError = (event: React.SyntheticEvent<HTMLVideoElement, Event>) => {
+        console.error("Error loading video:", event.currentTarget.src);
+    };
+
+    const handleVideoPlay = (index: number) => {
+        console.log(`Video at index ${index} is playing.`);
+    };
+
+    const renderMedia = (url: string, index: number) => {
         const extension = url.split(".").pop()?.toLowerCase();
         if (extension === "jpg" || extension === "jpeg" || extension === "png" || extension === "gif") {
             return (
@@ -59,7 +79,13 @@ const SlideImages: React.FC<SlideImagesProps> = ({ images, titulo, descricao }) 
         } else if (extension === "mp4") {
             return (
                 <div className="media-container">
-                    <video className="media-content" controls>
+                    <video
+                        ref={(el) => (videoRefs.current[index] = el)}
+                        className="media-content"
+                        controls
+                        onError={handleVideoError}
+                        onPlay={() => handleVideoPlay(index)}
+                    >
                         <source src={url} type="video/mp4" />
                         O seu navegador não suporta vídeos HTML5.
                     </video>
@@ -82,7 +108,7 @@ const SlideImages: React.FC<SlideImagesProps> = ({ images, titulo, descricao }) 
                     {images.map((slide, index) => (
                         <Slide tag="a" index={index} key={index}>
                             <div className="slide-content">
-                                {renderMedia(slide.url)}
+                                {renderMedia(slide.url, index)}
                             </div>
                         </Slide>
                     ))}
