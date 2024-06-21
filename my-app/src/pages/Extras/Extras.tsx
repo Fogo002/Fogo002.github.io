@@ -17,7 +17,6 @@ const Extras = () => {
         { url: require('../../assets/extra-feira-1.mp4') },
         { url: require('../../assets/extra-feira-2.mp4') },
         { url: require('../../assets/extra-feira-3-fixed.mp4') },
-        { url: require('../../assets/extra-feira-4.mp4') },
         { url: require('../../assets/extra-feira-0.mp4') },
         { url: require('../../assets/extra-feira-5.jpeg') },
         { url: require('../../assets/extra-feira-6.mp4') },
@@ -44,6 +43,10 @@ const Extras = () => {
         { url: require('../../assets/extra-reuniao-2.mp4') },
     ];
 
+    const images7 = [
+        { url: require('../../assets/extra-estilo-1.mp4') },
+    ];
+
     const descricaoLimpeza = '';
     const descricaoGatil = '';
     const descricaoRevista = '';
@@ -55,6 +58,7 @@ const Extras = () => {
         { titulo: "Desenvolvimento do Jogo no Scratch", imagens: images4, descricao: descricaoRevista },
         { titulo: "Feirinha", imagens: images2, descricao: descricaoRevista },
         { titulo: "Reunião do Todos Somos Especiais", imagens: images6, descricao: descricaoRevista },
+        { titulo: "Estilo Todos somos especiais", imagens: images7, descricao: "" },
     ];
 
     const atividadesPorPagina = 2;
