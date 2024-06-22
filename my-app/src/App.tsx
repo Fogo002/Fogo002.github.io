@@ -11,6 +11,8 @@ import FAQ from './pages/Mascote/Mascote';
 import Revista from './pages/Revista/Revista';
 import Mascote from './pages/Mascote/Mascote';
 import Extras from './pages/Extras/Extras';
+import History from './pages/History/History';
+
 
 function App() {
   return (
@@ -27,6 +29,7 @@ function App() {
             <Route path='/mascote' element={<Mascote />} />
             <Route path='/revista' element={<Revista />} />
             <Route path='/extras' element={<Extras />} />
+            <Route path='/historia' element={<History />} />
             <Route path='*' element={<Navigate to="/" replace />} />
           </Routes>
         </div>
